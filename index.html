@@ -7,35 +7,156 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        html { scroll-behavior: smooth; }
+        /* Base Styles */
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6; /* Soft background */
+            color: #4a5568;
+            margin: 0;
+            padding: 20px;
+        }
 
+        /* Shared Container for Alignment & Card Look */
+        .container {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1);
+        }
+
+        /* Header Styling */
+        header .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .header-content h1 {
+            color: #1a365d;
+            font-size: 36px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+
+        .header-content h2 {
+            color: #3182ce;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 24px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14.5px;
+        }
+
+        .contact-info span, .contact-info a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4a5568;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #3182ce;
+        }
+
+        /* Section & Summary Alignment */
+        .section-title {
+            color: #1a365d;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 0;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 12px;
+            text-align: left;
+        }
+
+        /* Blue Accent Line */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 65px;
+            background-color: #3182ce;
+            border-radius: 2px;
+        }
+
+        .section-content p {
+            font-size: 15.5px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-content strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        /* Button Styling */
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: #4CAF50;
+            background: #3182ce;
             color: white;
             border-radius: 8px;
             text-decoration: none;
             margin-top: 15px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2b6cb0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+            .header-content h1 { font-size: 28px; }
+            .header-content h2 { font-size: 16px; }
+            .section-title { font-size: 20px; }
+            .section-content p { font-size: 14.5px; }
+            .contact-info { gap: 12px; flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="container">
         <div class="header-content">
             <h1>Sanika Phalke</h1>
-            <h2>Software Engineer | Data Analyst Enthusiast</h2>
+            <h2>Software Engineer | Data Analytics Enthusiast</h2>
 
             <div class="contact-info">
-                <span><i class="fas fa-phone"></i> 93597 28005</span>
+                <span><i class="fas fa-phone"></i> +91 93597 28005</span>
                 <span><i class="fas fa-envelope"></i> sanikaphalke024@gmail.com</span>
                 <span><i class="fas fa-map-marker-alt"></i> Pune, Maharashtra</span>
 
@@ -51,23 +172,21 @@
     </div>
 </header>
 
-<!-- SUMMARY -->
-    
 <section id="summary" class="section">
     <div class="container">
-        <h2 class="section-title">CAREER SUMMARY</h2>
+        <h2 class="section-title">Career Summary</h2>
         <div class="section-content">
             <p>
-    <span aria-hidden="true">🚀</span> Recent Computer Science Engineering graduate with hands-on experience in cloud-native application development, backend engineering, AI-powered solutions, and data analytics. Proficient in building scalable microservices architectures using TypeScript, Java, Spring Boot, Express.js, PostgreSQL, and RESTful APIs, with practical exposure to event-driven systems, JWT authentication, and Redis caching. Experienced in deploying <span aria-hidden="true">☁️</span> serverless and cloud-based applications on AWS using EC2, Lambda, API Gateway, S3, IAM, and CloudFormation.
-</p>
+                <span aria-hidden="true">🚀</span> Recent <strong>Computer Science Engineering graduate</strong> with hands-on experience in <strong>cloud-native application development</strong>, <strong>backend engineering</strong>, <strong>AI-powered solutions</strong>, and <strong>data analytics</strong>. Proficient in building scalable <strong>microservices architectures</strong> using <strong>TypeScript</strong>, <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Express.js</strong>, <strong>PostgreSQL</strong>, and <strong>RESTful APIs</strong>, with practical exposure to <strong>event-driven systems</strong>, <strong>JWT authentication</strong>, and <strong>Redis caching</strong>. Experienced in deploying <span aria-hidden="true">☁️</span> <strong>serverless and cloud-based applications</strong> on <strong>AWS</strong> using <strong>EC2, Lambda, API Gateway, S3, IAM</strong>, and <strong>CloudFormation</strong>.
+            </p>
 
-<p>
-    <span aria-hidden="true">📊</span> Skilled in Data Analytics, Business Intelligence, Power BI dashboards, SQL optimization, Python-based analysis, Machine Learning, NLP, predictive analytics, and AI-driven insights for operational and business decision-making. Hands-on experience with <span aria-hidden="true">⚡</span> Microsoft Power Platform (Power Apps, Power Automate, Copilot Studio) and Low-Code/No-Code automation solutions, along with collaboration tools including Microsoft Teams, Planner, Loop, and SharePoint.
-</p>
+            <p>
+                <span aria-hidden="true">📊</span> Skilled in <strong>Data Analytics</strong>, <strong>Business Intelligence</strong>, <strong>Power BI dashboards</strong>, <strong>SQL optimization</strong>, <strong>Python-based analysis</strong>, <strong>Machine Learning</strong>, <strong>NLP</strong>, <strong>predictive analytics</strong>, and <strong>AI-driven insights</strong> for operational and business decision-making. Hands-on experience with <span aria-hidden="true">⚡</span> <strong>Microsoft Power Platform</strong> (<strong>Power Apps, Power Automate, Copilot Studio</strong>) and <strong>Low-Code/No-Code automation</strong> solutions, along with collaboration tools including <strong>Microsoft Teams, Planner, Loop</strong>, and <strong>SharePoint</strong>.
+            </p>
 
-<p>
-    <span aria-hidden="true">🛠️</span> Strong foundation in DevOps practices, Docker containerization, Git/GitHub, CI/CD workflows, Agile methodologies, system design, database management, and software engineering principles. Passionate about building <span aria-hidden="true">💡</span> scalable backend systems, data-driven products, and intelligent automation solutions with a focus on <span aria-hidden="true">🔒</span> performance, security, and innovation.
-</p>
+            <p>
+                <span aria-hidden="true">🛠️</span> Strong foundation in <strong>DevOps practices</strong>, <strong>Docker containerization</strong>, <strong>Git/GitHub</strong>, <strong>CI/CD workflows</strong>, <strong>Agile methodologies</strong>, <strong>system design</strong>, <strong>database management</strong>, and <strong>software engineering principles</strong>. Passionate about building <span aria-hidden="true">💡</span> <strong>scalable backend systems</strong>, <strong>data-driven products</strong>, and <strong>intelligent automation solutions</strong> with a focus on <span aria-hidden="true">🔒</span> <strong>performance</strong>, <strong>security</strong>, and <strong>innovation</strong>.
+            </p>
         </div>
     </div>
 </section>
